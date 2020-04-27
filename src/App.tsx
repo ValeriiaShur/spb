@@ -21,7 +21,7 @@ class App extends Component {
           mapStyle="mapbox://styles/lerashur/ck3sp0jab08qf1co62ujw9o13"
           onViewportChange={(viewport => this.setState({ viewport }))}
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
-          <Source id="spbjson" type="geojson" data='https://raw.githubusercontent.com/ValeriiaShur/geo-data/master/saint_petersburg/data/spb_selection.json?token=AK4T4RQME3SR7PPWQ6GZHFC6U3VFQ'>
+          <Source id="spbjson" type="geojson" data='https://raw.githubusercontent.com/ValeriiaShur/spb/master/src/component/data/spb_selection.json?token=AK4T4RUBDLFHZPKB42N2ALS6U3674'>
             <Layer id="buildings" type="fill"
               source="spbjson" paint={{ "fill-color": '#ffff00', "fill-opacity": 0.4 }}>
             </Layer>
