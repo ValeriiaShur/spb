@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ReactMapGL from 'react-map-gl';
-//import * as spbBuildings from "./component/data/spbBuldings";
+import ReactMapGL, { Layer, Source } from 'react-map-gl';
+import * as spbBuildings from './component/data/spb_selection.json';
+
 
 class App extends Component {
   state = {
@@ -21,12 +21,20 @@ class App extends Component {
           mapStyle="mapbox://styles/lerashur/ck3sp0jab08qf1co62ujw9o13"
           onViewportChange={(viewport => this.setState({ viewport }))}
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
+          <Source id="spbjson" type="geojson" data='https://raw.githubusercontent.com/ValeriiaShur/geo-data/master/saint_petersburg/data/spb_selection.json?token=AK4T4RQME3SR7PPWQ6GZHFC6U3VFQ'>
+            <Layer id="buildings" type="fill"
+              source="spbjson" paint={{ "fill-color": '#ffff00', "fill-opacity": 0.4 }}>
+            </Layer>
+          </Source>
+{/*           <Source id="vector_tiles" type="vector" url="https://raw.githubusercontent.com/ValeriiaShur/geo-data/master/saint_petersburg/data/spb-mn-tiles-details.tilejson?token=AK4T4RWJN5YCMUY2EHAIDDK6U3YII" />
+          <Layer id="layer_id" type="" source="vector_tiles"
+            source-layer="vector_tiles" /> */}
+
         </ReactMapGL>
       </div>
     );
   }
 }
-
 
 
 /* function App() {
