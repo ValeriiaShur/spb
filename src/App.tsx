@@ -13,8 +13,8 @@ function App() {
       <div>
         <NavBar />
         <Switch>
-          <Route exact path='spb/' component={Map} />
-          <Route exact path='spb/about' component={About} />
+          <Route exact path='https://valeriiashur.github.io/spb/' component={Map} />
+          <Route exact path='https://valeriiashur.github.io/spb/about' component={About} />
           <Route component={NoMatch} />
         </Switch>
       </div>
