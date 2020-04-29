@@ -1,4 +1,6 @@
-.App {
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +37,30 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: 'Roboto', 'texgyreherosregular', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+/** Navbar ================================================= */
+.navbar {
+  z-index: 1;
+}
+
+/** Map and Controls ========================================== */
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+/** About ========================================== */
+.about-page {
+  position: absolute;
+  top: 10%;
+  width: 80%;
+  z-index: 0;
 }

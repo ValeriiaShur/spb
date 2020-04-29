@@ -1,39 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NavBar from './component/NavBar';
+import Map from './component/Map';
+import { About } from './component/About';
+import { NoMatch } from './component/NoMatch';
+
 import './App.css';
-import ReactMapGL, { Layer, Source } from 'react-map-gl';
 
-
-class App extends Component {
-  state = {
-    viewport: {
-      width: "100vw",
-      height: "100vh",
-      latitude: 59.938504,
-      longitude: 30.355225,
-      zoom: 9
-    }
-  };
-  render() {
-    return (
-      <div className="App">
-        <ReactMapGL {...this.state.viewport}
-          mapStyle="mapbox://styles/lerashur/ck3sp0jab08qf1co62ujw9o13"
-          onViewportChange={(viewport => this.setState({ viewport }))}
-          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
-          {/*           <Source id="spbjson" type="geojson" data='https://raw.githubusercontent.com/ValeriiaShur/spb/master/src/component/data/spb_selection.json?token=AK4T4RSBRB4RPBS4AE2DW2C6VAO7A'>
-            <Layer id="buildings" type="fill"
-              source="spbjson" paint={{ "fill-color": '#ffff00', "fill-opacity": 0.4 }}>
-            </Layer>
-          </Source> */}
-          <Source id='building_footprints' type='vector' url='mapbox://lerashur.spb-buildings' />
-          <Layer id="buildings" type="fill"
-            source="building_footprints" source-layer="building_footprints"
-            paint={{ "fill-color": '#ffff00', "fill-opacity": 0.4 }}>
-          </Layer>
-        </ReactMapGL>
+function App() {
+  return (
+    <BrowserRouter>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route exact path='/' component={Map} />
+          <Route exact path='/about' component={About} />
+          <Route component={NoMatch} />
+        </Switch>
       </div>
-    );
-  }
+    </BrowserRouter>
+  );
 }
 
 
