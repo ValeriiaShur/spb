@@ -13,9 +13,9 @@ function App() {
       <div>
         <NavBar />
         <Switch>
-          <Route exact path='https://valeriiashur.github.io/spb/' component={Map} />
+          <Route component={Map} />
           <Route exact path='https://valeriiashur.github.io/spb/about/' component={About} />
-          <Route component={NoMatch} />
+          {/* <Route component={NoMatch} */} />
         </Switch>
       </div>
     </BrowserRouter>
