@@ -14,7 +14,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path='/' component={Map} />
-          <Route exact path='/about' component={About} />
+          <Route exact path='https://valeriiashur.github.io/spb/about' component={About} />
           <Route component={NoMatch} />
         </Switch>
       </div>
