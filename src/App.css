@@ -43,6 +43,11 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: 'Roboto', 'texgyreherosregular', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /** Navbar ================================================= */
 .navbar {
   z-index: 1;

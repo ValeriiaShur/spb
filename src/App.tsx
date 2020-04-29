@@ -13,9 +13,9 @@ function App() {
       <div>
         <NavBar />
         <Switch>
-          <Route component={Map} />
-          <Route exact path='https://valeriiashur.github.io/spb/about/' component={About} />
-          {/* <Route component={NoMatch} */} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Map} />
+          <Route exact path={process.env.PUBLIC_URL + '/about'} component={About} />
+          {/* <Route path={process.env.PUBLIC_URL + '*'} component={NoMatch} /> */}
         </Switch>
       </div>
     </BrowserRouter>

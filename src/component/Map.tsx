@@ -7,8 +7,8 @@ class Map extends Component {
         viewport: {
             width: "100%",
             height: "100%",
-            latitude: 59.938504,
-            longitude: 30.355225,
+            latitude: 59.945402,
+            longitude: 30.155074,
             zoom: 9
         }
     };
