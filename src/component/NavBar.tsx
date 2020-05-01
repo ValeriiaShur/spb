@@ -18,17 +18,17 @@ class NavBar extends Component {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
                             <NavItem >
-                                <NavLink className="d-inline p-2 bf-dark text-white" to="/map" >Home</NavLink>
+                                <NavLink className="d-inline p-2 bf-dark text-white" to="spb/" >Home</NavLink>
                             </NavItem>
                             <NavItem >
-                                <NavLink className="d-inline p-2 bf-dark text-white" to="/about" >About</NavLink>
+                                <NavLink className="d-inline p-2 bf-dark text-white" to="spb/about" >About</NavLink>
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
                 <Switch>
-                    <Route path='/map' component={Map} />
-                    <Route path='/about' component={About} />
+                    <Route path='spb/' component={Map} />
+                    <Route path='spb/about' component={About} />
                     <Route path='*' component={NoMatch} />
                 </Switch>
             </div>
