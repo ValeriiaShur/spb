@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactMapGL, { Layer, Source } from 'react-map-gl';
 import '../App.css';
 
-class Map extends Component {
+export default class Map extends Component {
     state = {
         viewport: {
             width: "100%",
@@ -30,4 +30,4 @@ class Map extends Component {
     }
 }
 
-export default Map;
+/* export default Map; */
