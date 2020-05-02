@@ -13,7 +13,7 @@ class NavBar extends Component {
         return (
             <div>
                 <Navbar bg="dark" expand="lg" variant="dark">
-                    <Navbar.Brand as={Link} to="/map">How-old-is-this</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/spb">How-old-is-this</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
@@ -27,8 +27,8 @@ class NavBar extends Component {
                     </Navbar.Collapse>
                 </Navbar>
                 <Switch>
-                    <Route path='/spb' component={Map} />
                     <Route path='/spb/about' component={About} />
+                    <Route path='/spb' component={Map} />
                     <Route path='*' component={NoMatch} />
                 </Switch>
             </div>
