@@ -17,6 +17,7 @@
     "@types/react-router-dom": "^5.1.5",
     "mapbox-gl": "^1.10.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-map-gl": "^5.2.3",
     "react-mapbox-gl": "^4.8.3",
@@ -31,7 +32,12 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "code:check": "yarn code:lint; yarn code:format --check",
+    "code:clean": "yarn code:lint --fix; yarn code:format --write",
+    "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\"",
+    "code:format": "prettier './src/**/**.{js,jsx,ts,tsx}'",
+    "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,6 +56,7 @@
   },
   "devDependencies": {
     "@types/react-router": "^3.0.22",
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "poetic": "^1.5.0"
   }
 }
