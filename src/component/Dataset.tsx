@@ -2,12 +2,12 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../App.css';
 
-export const About = () => (
+export const Dataset = () => (
   <Container>
-    <div className="about-page">
+    <div className="dataset-page">
       <Row className="title-text">
         <Col sm>
-          <h2>About</h2>
+          <h2>Dataset</h2>
         </Col>
       </Row>
       <Row>

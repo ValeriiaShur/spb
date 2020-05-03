@@ -2,24 +2,16 @@ import React, { Component } from 'react';
 import ReactMapGL, { Layer, Source } from 'react-map-gl';
 import '../App.css';
 
-type MapProps = {};
-type MapState = {
-  viewport: { width: string; height: string; latitude: number; longitude: number; zoom: number };
-};
-
-export default class Map extends Component<MapProps, MapState> {
-  constructor(props: MapProps) {
-    super(props);
-    this.state = {
-      viewport: {
-        width: '100%',
-        height: '100%',
-        latitude: 59.945402,
-        longitude: 30.155074,
-        zoom: 9,
-      },
-    };
-  }
+export default class Map extends Component {
+  state = {
+    viewport: {
+      width: '100%',
+      height: '100%',
+      latitude: 59.945402,
+      longitude: 30.155074,
+      zoom: 9,
+    },
+  };
 
   render() {
     return (
